@@ -1356,3 +1356,26 @@ strong, .bold {
 
   .v3-grid--4col > .grid-cell {
     width: 25%; } }
+body.email {
+  background-color: red;
+  color: white; }
+
+body.computer-limited {
+  background-color: yellow;
+  color: black; }
+
+body.computer {
+  background-color: yellow;
+  color: black; }
+
+body.none {
+  background-color: black;
+  color: grey; }
+
+body.asleep {
+  background-color: blue;
+  color: grey; }
+
+body.ready {
+  background-color: green;
+  color: white; }

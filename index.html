@@ -3,6 +3,7 @@ layout: default
 ---
 <div class="grid grid--center">
   <div class="grid-cell">
+    <h6 id="asof" class="tc h5"></h6>
     <h1 id="where" class="h1 tc">Where's Dave?</h1>
     <h1 id="availability" class="h1 tc"></h1>
     <h2 id="time" class="tc f5"></h2>
@@ -19,9 +20,18 @@ layout: default
 var timeNowInAustralia = dateTimeNow(10);
 $("#time").html("Time in Sydney and friends is " + timeNowInAustralia.getHours() + ":" + timeNowInAustralia.getMinutes() + " on " + (timeNowInAustralia.getMonth()+1) + "/" + timeNowInAustralia.getDate() + ", " + (timeNowInAustralia.getYear()+1900)  );
 
-var month = timeNowInAustralia.getMonth() + 1;
-var day = 17;//timeNowInAustralia.getDate();
-var hour = 6;//timeNowInAustralia.getHours();
+function getParameterByName(name,otherwise) {
+  name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+  var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+  results = regex.exec(location.search);
+  return results == null ? otherwise : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
+var month = getParameterByName("month",timeNowInAustralia.getMonth() + 1);
+var day   = getParameterByName("day",  timeNowInAustralia.getDate());
+var hour  = getParameterByName("hour", timeNowInAustralia.getHours());
+
+$("#asof").html("as of " + month + "/" + day + "/2013 at " + hour + ":00");
 
 found_info = wheresDave(data,month,day,hour);
 
@@ -29,6 +39,7 @@ if (found_info) {
   $("#where").html(found_info["where"]);
   available = found_info["available"];
   $("#availability").html(availability[available]);
+  $("body").first().attr("class",available)
 }
 else {
   $("#where").html("No clue");

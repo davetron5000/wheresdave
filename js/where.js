@@ -42,7 +42,7 @@ var wheresDave = function(data,month,day,hour) {
         }
       }
       currentDay  = currentDay + 1;
-      currentHour = 1;
+      currentHour = 0;
     }
     currentMonth = currentMonth + 1;
     currentDay   = 1;
@@ -52,8 +52,9 @@ var wheresDave = function(data,month,day,hour) {
 
 var availability = {
   "email": "Limited Access to Email only",
-  "computer": "Limited Access a Computer",
+  "computer-limited": "Limited Access a Computer",
+  "computer": "Easy Access a Computer",
   "none": "Completely inaccessible",
   "asleep": "Sleeping",
-  "ready": "Full Armed and Operational!",
+  "ready": "Fully Armed and Operational!",
 }
