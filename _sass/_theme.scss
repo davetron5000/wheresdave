@@ -1,0 +1,174 @@
+/*
+
+        Mathematical Theme
+
+
+*/
+
+$dkgry: #444;
+$mdgry: #999;
+$gry: #d3d3d3;
+$ltgry: #eee;
+$link:  lighten(#280c5c, 35%);
+$title: lighten(#280c5c, 10%);
+
+
+
+body {
+  color: $dkgry;
+  background-color: #fff;
+  font-family: "skolar", Georgia, serif;
+}
+
+.content {
+  padding:0 20px;
+
+  max-width: 768px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+/* This is the worst. How did I mess this up. */
+
+.content-full {
+  padding:0 20px;
+  max-width: 960px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+a {
+  -webkit-transition: color .3s;
+  transition: color .3s;
+  color: $link;
+  text-decoration: none;
+  &:hover,
+  &:active {
+    -webkit-transition: color .3s;
+    transition: color .3s;
+    color: darken($link, 20%);
+  }
+}
+
+/* Skins */
+
+.dkgry { color: $dkgry; }
+.mdgry { color: $mdgry; }
+.ltgry { color: $ltgry; }
+.wht {   color: #fff; }
+.gry {   color: $gry; }
+.link {  color: $link; }
+.title {  color: $title; }
+
+.bg-dkgry { background-color: $dkgry; }
+.bg-gry { color: $gry; }
+.bg-mdgry { background-color: $mdgry; }
+.bg-ltgry { background-color: $ltgry; }
+.bg-link {  background-color: $link; }
+.bg-purple {
+  background-color: $link;
+  color: #fff;
+}
+
+/* Borders */
+
+.bor   { border:        1px solid; }
+.borto { border-top:    1px solid; }
+.borri { border-right:  1px solid; }
+.borbo { border-bottom: 1px solid; }
+.borle { border-left:   1px solid; }
+
+.bor-dkgry { border-color: $dkgry; }
+.bor-gry { border-color: $gry; }
+.bor-mdgry { border-color: $mdgry; }
+.bor-ltgry { border-color: $ltgry; }
+.bor-wht {   border-color: #fff; }
+
+
+.rc {   border-radius: .25rem; }
+.circ { border-radius: 50%; }
+
+.btn-link {
+  color: #fff;
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
+  background-color: $link;
+  border-radius: .25rem;
+  border: none;
+  &:hover,
+  &:active {
+    color: #fff;
+    -webkit-transition: background-color .3s;
+    transition: background-color .3s;
+    background-color: lighten($link, 5%);
+    box-shadow: inset 0 2px 4px rgba(0,0,0,.2);
+  }
+}
+
+.input:focus {
+  outline: none;
+  border-color: $link;
+}
+
+.bg-img {
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-image: url(/images/book_bg.jpg);
+  background-position: bottom;
+}
+
+.shadow {
+  box-shadow: 5px 5px 14px 1px rgba(0,0,0,0.4);
+}
+
+pre {
+  background: #fff;
+  border: solid thin $mdgry;
+  padding: 10px;
+  border-radius: .25rem;
+}
+
+iframe {
+  margin: 0 auto;
+  display: block;
+}
+
+/*
+   Modal stuff
+
+  This structure is forced on us by the plugin provider, and I'm too lazy
+  to roll my own modal dialog.
+
+*/
+
+#simplemodal-overlay {
+  background-color: #000;
+}
+
+#simplemodal-container {
+  height:50%;
+  width:50%;
+  //height:360px;
+  //width:600px;
+  color:$dkgry;
+  background-color: $ltgry;
+  border:5px solid $mdgry;
+  padding:20px;
+}
+
+#simplemodal-container .simplemodal-data {
+  padding:10px;
+
+}
+#simplemodal-container a.modalCloseImg {
+  background:url(/images/x.png) no-repeat;
+  width:25px;
+  height:29px;
+  display:inline;
+  z-index:3200;
+  position:absolute;
+  top:-15px;
+  right:-16px;
+  cursor:pointer;
+}
+

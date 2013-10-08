@@ -1,0 +1,38 @@
+---
+layout: default
+---
+<div class="grid grid--center">
+  <div class="grid-cell">
+    <h1 id="where" class="h1 tc">Where's Dave?</h1>
+    <h1 id="availability" class="h1 tc"></h1>
+    <h2 id="time" class="tc f5"></h2>
+  </div>
+</div>
+<div class="grid grid--center">
+  <div class="grid-cell grid-cell--center">
+    <h3 class="tc f4">Last Seen</h3>
+    <a class="twitter-timeline" data-chrome="noheader nofooter noborders noscrollbar transparent" data-tweet-limit="1" href="https://twitter.com/davetron5000" data-widget-id="387346382027112449">Tweets by @davetron5000</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+  </div>
+</div>
+<script>
+var timeNowInAustralia = dateTimeNow(10);
+$("#time").html("Time in Sydney and friends is " + timeNowInAustralia.getHours() + ":" + timeNowInAustralia.getMinutes() + " on " + (timeNowInAustralia.getMonth()+1) + "/" + timeNowInAustralia.getDate() + ", " + (timeNowInAustralia.getYear()+1900)  );
+
+var month = timeNowInAustralia.getMonth() + 1;
+var day = 17;//timeNowInAustralia.getDate();
+var hour = 6;//timeNowInAustralia.getHours();
+
+found_info = wheresDave(data,month,day,hour);
+
+if (found_info) {
+  $("#where").html(found_info["where"]);
+  available = found_info["available"];
+  $("#availability").html(availability[available]);
+}
+else {
+  $("#where").html("No clue");
+  $("#availability").html("Give it a shot");
+}
+
+</script>

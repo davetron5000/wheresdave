@@ -1,0 +1,35 @@
+# This will be the first part of the title tag for your site 
+# <title> {{site.name}} </title>
+# ============================================================
+name: "Where is Dave?!?"
+port: 5000
+# Populates the meta description for the site. Should be under 150 characters for best SEO results.
+# ============================================================
+description: "Given Dave's location, and your time of the day, where is at this moment?"
+
+# Owner (organization or individual) of site content - You'll want to change this from mrmrs :)
+# ============================================================
+author: "davetron5000"
+
+# Change this when you generate your site for production to your production URL i.e http://mrsjxn.com
+# ============================================================
+url: "http://davetron5000.github.io/wheresdave"
+
+# Publish future posts or not option. 
+# ============================================================
+future: true
+
+# "A list of directories (including trailing slash) and files to exclude from the conversion"
+# I normally exclude _sass, README*, and .gitignore
+# Directories that start with an underscore _ are not copied over by default. Still like to include _sass anyways.
+# ============================================================
+exclude: [README.md, Rakefile]
+
+# Pagination variable for how many posts to show in a list
+# ============================================================
+#paginate: 5
+
+# Style of permalinks
+# ============================================================
+permalink: pretty
+

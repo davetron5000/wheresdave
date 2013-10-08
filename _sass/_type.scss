@@ -1,0 +1,91 @@
+/*
+
+        Mathematical Type
+
+
+*/
+
+body {
+  font-size: 100%;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+.ss {
+  font-family: "proxima-nova", helvetica, arial, sans-serif;
+}
+
+.s {
+  font-family: "skolar", Georgia, serif;
+}
+
+h1,.f1 { font-size: 1.75rem; }
+h2,.f2 { font-size: 1.5rem; }
+h3,.f3 { font-size: 1.25rem; }
+h4,.f4 { font-size: 1rem; }
+h5,.f5 { font-size: .8rem; }
+h6,.f6 { font-size: .7rem; }
+
+@include break(medium) {
+  h1,.f1 { font-size: 2rem; }
+  h2,.f2 { font-size: 1.75rem; }
+  h3,.f3 { font-size: 1.5rem; }
+  h4,.f4 { font-size: 1.25rem; }
+  h5,.f5 { font-size: 1rem; }
+  h6,.f6 { font-size: .75rem; }
+}
+
+@include break(large) {
+  h1,.f1 { font-size: 3rem; }
+  h2,.f2 { font-size: 2.75rem; }
+  h3,.f3 { font-size: 2rem; }
+  h4,.f4 { font-size: 1.5rem; }
+  h5,.f5 { font-size: 1rem; }
+  h6,.f6 { font-size: .75rem !important; }
+  .mega {  font-size:3rem!important;line-height:1.3; margin-bottom:0!important; }
+}
+
+/* Mobile-first font sizes
+ *
+*/
+
+
+p, ul, ol, .p {
+  font-size: 1.25rem; // Used to be 1.125rem for xsmall
+}
+
+small, .small {
+  font-size: .875rem;
+  -webkit-text-size-adjust: 100%;
+  @include break(medium) {
+    font-size: 1rem;
+  }
+}
+
+strong, .bold {
+  font-weight: 700;
+}
+.reg {
+  font-weight: normal;
+}
+.i {
+  font-style: italic;
+}
+
+.caps { 
+  text-transform: uppercase;
+  letter-spacing: .2em;
+}
+
+/* generated markup + reset is squashing this for vanilla pre and code */
+.mono, span.monospaced, pre, code, pre code {  
+  font-family: "source-code-pro", monospace; 
+}
+
+.tc { text-align: center; }
+.tl { text-align: left; }
+.tr  { text-align: right; }
+.thin { font-weight: 100; }
+.ttl { text-transform: none; }
+.ls1 { letter-spacing:.01em; }
+.ts {text-shadow: 0 1px 0 #fff; }

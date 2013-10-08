@@ -1,0 +1,63 @@
+/*
+
+        Base
+
+
+*/
+
+img {
+  width: 100%;
+  max-width: 100%;
+}
+
+.input {
+  padding: .75rem 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  border-radius: .25rem;
+  border: 1px solid;
+  max-width: 100%;
+  &::-webkit-input-placeholder {
+    line-height: 1.5rem;
+  }
+}
+
+.select {
+  margin-bottom: 1rem;
+  padding: .5rem;
+}
+
+
+// Width Media Queries
+
+@mixin break($point) {
+  @if $point == medium {
+    @media screen and (min-width: 640px) and (max-width: 1023px) { @content; }
+  }
+  @else if $point == large {
+    @media screen and (min-width: 1024px)  { @content; }
+  }
+}
+/* ==========================================================================
+   UGH
+   ========================================================================== */
+
+
+.dn {display:none !important;}
+.db {display:block;}
+.dib {display:inline-block;}
+
+.list {
+  list-style-type:none;
+  margin-left:0;
+  padding:0;
+}
+
+.list-item {
+  margin-bottom:1rem;
+}
+
+.sq96 {height:96px;width:96px;line-height:96px;}
+
+blockquote { margin: 0; }
