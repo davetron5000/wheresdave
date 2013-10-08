@@ -347,7 +347,7 @@ table {
 body {
   color: #444444;
   background-color: #fff;
-  font-family: "skolar", Georgia, serif; }
+  font-family: "omnes-pro", courier, sans-serif; }
 
 .content {
   padding: 0 20px;
@@ -581,13 +581,7 @@ blockquote {
 body {
   font-size: 100%;
   line-height: 1.6;
-  font-weight: 400; }
-
-.ss {
-  font-family: "proxima-nova", helvetica, arial, sans-serif; }
-
-.s {
-  font-family: "skolar", Georgia, serif; }
+  font-weight: 200; }
 
 h1, .f1 {
   font-size: 1.75rem; }
@@ -660,12 +654,6 @@ small, .small {
   @media screen and (min-width: 640px) and (max-width: 1023px) {
     small, .small {
       font-size: 1rem; } }
-
-strong, .bold {
-  font-weight: 700; }
-
-.reg {
-  font-weight: normal; }
 
 .i {
   font-style: italic; }
@@ -1359,23 +1347,49 @@ strong, .bold {
 body.email {
   background-color: red;
   color: white; }
+  body.email h2, body.email h1 {
+    font-family: "reenie-beanie", courier, sans-serif; }
+  body.email h1#where {
+    font-size: 400%; }
 
 body.computer-limited {
   background-color: yellow;
   color: black; }
+  body.computer-limited h2, body.computer-limited h1 {
+    font-family: "reenie-beanie", courier, sans-serif; }
+  body.computer-limited h1#where {
+    font-size: 400%; }
 
 body.computer {
   background-color: yellow;
   color: black; }
+  body.computer h2, body.computer h1 {
+    font-family: "octin-stencil", courier, sans-serif; }
+  body.computer h1#where {
+    font-size: 400%; }
 
 body.none {
   background-color: black;
   color: grey; }
+  body.none h1 {
+    font-family: "aw-conqueror-carved-four", courier, sans-serif; }
+
+body.flight {
+  background-color: black;
+  color: grey; }
+  body.flight h1 {
+    font-family: "sneakers-script-ultra-wide", courier, sans-serif; }
 
 body.asleep {
   background-color: blue;
-  color: grey; }
+  color: white; }
+  body.asleep h1 {
+    font-family: "aw-conqueror-carved-four", courier, sans-serif; }
 
 body.ready {
   background-color: green;
   color: white; }
+  body.ready h2, body.ready h1 {
+    font-family: "octin-stencil", courier, sans-serif; }
+  body.ready h1#where {
+    font-size: 400%; }

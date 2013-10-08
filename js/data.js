@@ -8,7 +8,7 @@ var data = {
       },
       7: {
         where: "Flying to LA",
-        available: "none"
+        available: "flight"
       },
       14: {
         where: "LAX",
@@ -16,7 +16,7 @@ var data = {
       },
       15: { 
         where: "Flying to Sydney",
-        available: "none"
+        available: "flight"
       }
     },
     18: {
@@ -30,7 +30,7 @@ var data = {
       },
       15: {
         where: "Flying to Tasmania",
-        available: "none",
+        available: "flight",
       },
       18: {
         where: "Tasmania",
@@ -44,7 +44,7 @@ var data = {
       },
       7: { 
         where: "Flight to Melbourne",
-        available: "none",
+        available: "flight",
       },
       8: { 
         where: "Melbourne",
@@ -54,7 +54,7 @@ var data = {
     22: {
       9: { 
         where: "Flight to Cairns",
-        available: "none"
+        available: "flight"
       },
       13: { 
         where: "Cairns",
@@ -88,7 +88,7 @@ var data = {
     25: {
       16: {
         where: "Flight to Sydney",
-        available: "none"
+        available: "flight"
       },
       21: {
         where: "Sydney",
@@ -142,7 +142,7 @@ var data = {
       },
       15: {
         where: "Flying to SFO",
-        available: "none"
+        available: "flight"
       }
     },
     31: {
@@ -252,7 +252,7 @@ var data = {
       },
       21: {
         where: "Flight to Miami",
-        available: "none"
+        available: "flight"
       }
     },
     8: {
@@ -350,7 +350,7 @@ var data = {
     12: {
       0: {
         where: "Flight to DCA",
-        available: "none"
+        available: "flight"
       },
       1: {
         where: "RubyConf",

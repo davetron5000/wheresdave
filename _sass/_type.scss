@@ -8,15 +8,7 @@
 body {
   font-size: 100%;
   line-height: 1.6;
-  font-weight: 400;
-}
-
-.ss {
-  font-family: "proxima-nova", helvetica, arial, sans-serif;
-}
-
-.s {
-  font-family: "skolar", Georgia, serif;
+  font-weight: 200;
 }
 
 h1,.f1 { font-size: 1.75rem; }
@@ -63,10 +55,10 @@ small, .small {
 }
 
 strong, .bold {
-  font-weight: 700;
+  //font-weight: 700;
 }
 .reg {
-  font-weight: normal;
+  //font-weight: normal;
 }
 .i {
   font-style: italic;

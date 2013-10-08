@@ -8,7 +8,19 @@ var ASLEEP = {
   available: "asleep"
 };
 
+var HAVENT_LEFT = {
+  where: "Haven't Left Yet",
+  available: "notleft"
+}
+
 var wheresDave = function(data,month,day,hour) {
+  if (month < 10) {
+    return HAVENT_LEFT;
+  }
+  if ( (month == 10) && ( day < 16 ) ) {
+    return HAVENT_LEFT;
+  }
+
 
   var previousFound   = UNKNOWN,
       previousDay     = 0,
@@ -52,9 +64,10 @@ var wheresDave = function(data,month,day,hour) {
 
 var availability = {
   "email": "Limited Access to Email only",
-  "computer-limited": "Limited Access a Computer",
+  "computer-limited": "Limited Access to a Computer",
   "computer": "Easy Access a Computer",
   "none": "Completely inaccessible",
+  "flight": "Completely inaccessible",
   "asleep": "Sleeping",
   "ready": "Fully Armed and Operational!",
 }

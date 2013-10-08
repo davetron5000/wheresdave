@@ -1,29 +1,59 @@
 body.email {
   background-color: red;
   color: white;
+  h2, h1 {
+    font-family: "reenie-beanie", courier, sans-serif;
+  }
+  h1#where { font-size: 400%; }
 }
 
 body.computer-limited {
   background-color: yellow;
   color: black;
+  h2, h1 {
+    font-family: "reenie-beanie", courier, sans-serif;
+  }
+  h1#where { font-size: 400%; }
 }
 
 body.computer {
   background-color: yellow;
   color: black;
+  h2, h1 {
+    font-family: "octin-stencil", courier, sans-serif;
+  }
+  h1#where { font-size: 400%; }
 }
 
 body.none {
   background-color: black;
   color: grey;
+  h1 {
+    font-family: "aw-conqueror-carved-four", courier, sans-serif;
+  }
+}
+
+body.flight {
+  background-color: black;
+  color: grey;
+  h1 {
+    font-family: "sneakers-script-ultra-wide", courier, sans-serif;
+  }
 }
 
 body.asleep {
   background-color: blue;
-  color: grey;
+  color: white;
+  h1 {
+    font-family: "aw-conqueror-carved-four", courier, sans-serif;
+  }
 }
 
 body.ready {
   background-color: green;
   color: white;
+  h2, h1 {
+    font-family: "octin-stencil", courier, sans-serif;
+  }
+  h1#where { font-size: 400%; }
 }

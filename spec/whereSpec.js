@@ -1,7 +1,18 @@
 describe("wheresDave", function() {
+  describe("before I leave", function() {
+    beforeEach(function() {
+      dataFound = wheresDave({},10,8,8);
+    });
+    it("returns haven't left for that time",function() {
+      expect(dataFound["where"]).toBe("Haven't Left Yet");
+    });
+    it("returns the availability for that time",function() {
+      expect(dataFound["available"]).toBe("notleft");
+    });
+  });
   describe("when the day and hour exactly match an entry", function() {
     var month                = 10;
-    var date                 = 12;
+    var date                 = 22;
     var hour                 = 5;
     var expectedLocation     = "foobar";
     var expectedAvailability = "email";
@@ -30,7 +41,7 @@ describe("wheresDave", function() {
   describe("when the current date/time is between two entries", function() {
     describe("during waking hours", function() {
       var month                = 10;
-      var date                 = 12;
+      var date                 = 22;
       var hour                 = 13;
       var expectedLocation     = "foobar";
       var expectedAvailability = "email";
@@ -63,7 +74,7 @@ describe("wheresDave", function() {
     describe("during sleeping hours", function() {
       describe("when nothing is going on", function() {
         var month                = 10;
-        var date                 = 12;
+        var date                 = 22;
         var hour                 = 13;
         var expectedLocation     = "foobar";
         var expectedAvailability = "email";
@@ -96,7 +107,7 @@ describe("wheresDave", function() {
 
       describe("when something started during sleeping hours", function() {
         var month                = 10;
-        var date                 = 12;
+        var date                 = 22;
         var hour                 = 13;
         var expectedLocation     = "foobar";
         var expectedAvailability = "email";
@@ -129,7 +140,7 @@ describe("wheresDave", function() {
   });
   describe("when the current date/time is between two entries", function() {
     var month                = 10;
-    var date                 = 12;
+    var date                 = 22;
     var hour                 = 13;
     var expectedLocation     = "foobar";
     var expectedAvailability = "email";
@@ -161,7 +172,7 @@ describe("wheresDave", function() {
 
   describe("when outside the bounds of the dataset", function() {
     var month     = 10;
-    var date      = 12;
+    var date      = 22;
     var hour      = 10;
     var dataFound = null;
     var data      = {};
@@ -180,17 +191,6 @@ describe("wheresDave", function() {
     });
 
     describe("when the day and hour is earlier than the first entry", function() {
-      describe("when the month does not match", function() {
-        beforeEach(function() {
-          dataFound = wheresDave(data,month-1,date,hour);
-        });
-        it("returns an unknown where",function() {
-          expect(dataFound["where"]).toBe("unknown");
-        });
-        it("returns an unknown availability",function() {
-          expect(dataFound["available"]).toBe("unknown");
-        });
-      });
       describe("when the month matches, but not the date", function() {
         beforeEach(function() {
           dataFound = wheresDave(data,month,date-1,hour);
