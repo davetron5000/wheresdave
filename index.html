@@ -95,14 +95,20 @@ layout: default
 
 function formatDate(date) {
   var minutes = date.getMinutes();
+  var hours   = date.getHours();
+  var ampm    = "am";
+
   if (minutes < 10) {
     minutes = "0" + minutes;
   }
-  var hours = date.getHours();
-  var ampm = "am"
+
+  if (hours == 12) {
+    ampm = "pm";
+  }
+
   if (hours > 12) {
-    hours = hours - 12
-    ampm = "pm"
+    hours = hours - 12;
+    ampm = "pm";
   }
   return "" + hours + 
     ":"    + minutes + ampm +
