@@ -92,34 +92,29 @@ layout: default
   </div>
 </div>
 <script>
-function showTimeInAustralia() {
-  var timeNowInAustralia = dateTimeNow(10);
-  var minutes = timeNowInAustralia.getMinutes();
+
+function formatDate(date) {
+  var minutes = date.getMinutes();
   if (minutes < 10) {
     minutes = "0" + minutes;
   }
-  $("#time-aus").html("Time in Sydney is " + timeNowInAustralia.getHours() +
-                  ":"    + minutes +
-                  " on " + (timeNowInAustralia.getMonth()+ 1) +
-                  "/"    + timeNowInAustralia.getDate() +
-                  ", "   + (timeNowInAustralia.getYear()+ 1900)  );
-}
-
-function showTimeForYou() {
-  var timeNow = new Date();
-  var minutes = timeNow.getMinutes();
-  if (minutes < 10) {
-    minutes = "0" + minutes;
+  var hours = date.getHours();
+  var ampm = "am"
+  if (hours > 12) {
+    hours = hours - 12
+    ampm = "pm"
   }
-  $("#time-you").html("Time where you are is " + timeNow.getHours() +
-                  ":"    + minutes +
-                  " on " + (timeNow.getMonth()+ 1) +
-                  "/"    + timeNow.getDate() +
-                  ", "   + (timeNow.getYear()+ 1900)  );
+  return "" + hours + 
+    ":"    + minutes + ampm +
+    " on " + (date.getMonth()+ 1) +
+    "/"    +  date.getDate() +
+    ", "   + (date.getYear()+ 1900);
 }
 
-showTimeInAustralia();
-showTimeForYou();
+var timeNowInAustralia = dateTimeNow(10);
+
+$("#time-aus").html("Time in Sydney is " + formatDate(timeNowInAustralia));
+$("#time-you").html("Time where you are is " + formatDate(new Date()));
 
 function getParameterByName(name,otherwise) {
   name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
