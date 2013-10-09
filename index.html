@@ -6,12 +6,13 @@ layout: default
     <h6 id="asof" class="tc h5"></h6>
     <h1 id="where" class="h1 tc">Where's Dave?</h1>
     <h2 id="availability" class="h3 f3 tc"></h1>
-    <h3 id="time" class="tc f5"></h2>
+    <h3 id="time-aus" class="tc f5"></h2>
+    <h3 id="time-you" class="tc f5"></h2>
   </div>
 </div>
 <div class="grid grid--center mb2">
   <div class="grid-cell grid-cell--center">
-    <h3 class="tc f4">Last Seen</h3>
+    <h3 class="tc f4">Dave Last Seen</h3>
     <a class="twitter-timeline" data-chrome="noheader nofooter noborders noscrollbar" data-tweet-limit="1" href="https://twitter.com/davetron5000" data-widget-id="387346382027112449">Tweets by @davetron5000</a>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
   </div>
@@ -97,14 +98,28 @@ function showTimeInAustralia() {
   if (minutes < 10) {
     minutes = "0" + minutes;
   }
-  $("#time").html("Time in Sydney and friends is " + timeNowInAustralia.getHours() +
+  $("#time-aus").html("Time in Sydney is " + timeNowInAustralia.getHours() +
                   ":"    + minutes +
                   " on " + (timeNowInAustralia.getMonth()+ 1) +
                   "/"    + timeNowInAustralia.getDate() +
                   ", "   + (timeNowInAustralia.getYear()+ 1900)  );
 }
 
+function showTimeForYou() {
+  var timeNow = new Date();
+  var minutes = timeNow.getMinutes();
+  if (minutes < 10) {
+    minutes = "0" + minutes;
+  }
+  $("#time-you").html("Time where you are is " + timeNow.getHours() +
+                  ":"    + minutes +
+                  " on " + (timeNow.getMonth()+ 1) +
+                  "/"    + timeNow.getDate() +
+                  ", "   + (timeNow.getYear()+ 1900)  );
+}
+
 showTimeInAustralia();
+showTimeForYou();
 
 function getParameterByName(name,otherwise) {
   name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
