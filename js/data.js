@@ -104,10 +104,6 @@ var data = {
     27: {
       8: { 
         where: "Sydney",
-        available: "ready"
-      },
-      18: {
-        where: "Sydney",
         available: "computer-limited"
       }
     },
