@@ -17,8 +17,13 @@ var wheresDave = function(data,month,day,hour) {
   if (month < 10) {
     return HAVENT_LEFT;
   }
-  if ( (month == 10) && ( day < 16 ) ) {
-    return HAVENT_LEFT;
+  if (month == 10) {
+    if ( day < 17 ) {
+      return HAVENT_LEFT;
+    }
+    else if ( (day == 17) && (hour < 5) ) {
+      return HAVENT_LEFT;
+    }
   }
 
 
